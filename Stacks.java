@@ -10,9 +10,9 @@
       }
       
       public void push(int x){
-        //   if(top==arr.length-1){
-              
-        //   }
+          if(top==arr.length-1){
+           doublesize();   
+          }
           
           top++;
           arr[top]=x;
@@ -36,7 +36,14 @@
       }
       
       public int top(){
-          return top;
+          return arr[top];
+      }
+      public void doublesize(){
+          int[] temp=arr;
+          arr= new int[2*arr.length];
+          for(int i=0;i<temp;i++){
+              arr[i]=temp[i];
+          }
       }
 }
 
@@ -50,5 +57,9 @@ public class MyClass {
     
       System.out.println(s.size());
       System.out.println(s.top());
+      int x=s.pop();
+      System.out.println("top element is "+x);
+   
+       System.out.println(s.isEmpty());
     }
 }
