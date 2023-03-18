@@ -49,7 +49,11 @@ public class MyClass {
         
     }
     public static void delete(Node head,int pos){
-        
+        if(head==null){
+        return;
+        }if(pos==0){
+          return;
+        }
         Node temp=head;
         int count=1;
         while(count<pos-1){
