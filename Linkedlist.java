@@ -12,11 +12,12 @@ public class MyClass {
     public static void print(Node head){
         
         while(head!=null){
-                System.out.println(head.data);
+                System.out.print(head.data+"-->");
                 head=head.next;
             
             
         }
+        System.out.print(head);
         
         
         //   System.out.println(head.data);
@@ -24,6 +25,18 @@ public class MyClass {
         //      System.out.println(head.next.next.data);
         
     }
+    public static void length(Node head){
+        int count=0;
+        while(head!=null){
+            count++;
+            head=head.next;
+            
+        }
+        System.out.println(count);
+        
+    }
+    
+    
     public static void main(String args[]) {
      Node head= new Node(5);
      Node sec= new Node(10);
@@ -33,5 +46,7 @@ public class MyClass {
     //   System.out.println(sec);
       sec.next=third;
       print(head);
+      System.out.println();
+      length(head);
     }
 }
